@@ -1,11 +1,8 @@
 from time import sleep
 from random import randint
 import os
+osn = os.name
 
-# Função para limpar a tela
-def limpar_tela():
-    # Se o sistema operacional for Windows, usa 'cls', senão usa 'clear'
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 # String original
 h = "Hello World"
@@ -25,7 +22,8 @@ while True:
         print(f"\033[1;{randint(31, 37)};{randint(41, 47)}m", f"{h2 + char:^15}", f"\033[m", flush=True)
         sleep(timer)
         # Limpa a tela antes de cada iteração
-        limpar_tela()
+        # Se o sistema operacional for Windows, usa 'cls', senão usa 'clear'
+        os.system('cls' if osn == 'nt' else 'clear')
 
     # Parte 2: Adiciona o próximo caractere de h a h2, se ainda não completou
     if cont < len(h):
