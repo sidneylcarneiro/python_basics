@@ -8,7 +8,7 @@ osn = os.name
 h = "Hello World"
 h2 = ""  # String inicial
 cont = 0  # Contador para adicionar caracteres a h2
-timer = 0.15  # Tempo de espera entre impressões
+timer = 0.02  # Tempo de espera entre impressões
 
 # Loop infinito para repetir o processo
 while True:
